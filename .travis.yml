@@ -12,4 +12,4 @@ deploy:
   provider: heroku
   app: continuous-integration-setup
   api_key:
-    secure: 87a4a4c4-1050-49a3-b055-e2f7b9ede065
+    secure: $API_KEY
