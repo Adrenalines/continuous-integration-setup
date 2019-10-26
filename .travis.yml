@@ -13,3 +13,7 @@ deploy:
   app: continuous-integration-setup
   api_key:
     secure: $API_KEY
+
+after_success:
+  - cat ./coverage/lcov.info | ./node_modules/codecov.io/bin/codecov.io.js
+  - cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js
